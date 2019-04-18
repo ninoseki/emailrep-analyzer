@@ -13,7 +13,9 @@ class EmailRep():
 
     def get(self, email_address):
         url = "{}/{}".format(self.base_url, email_address)
-        return self._request(url)
+        json = self._request(url)
+        json["mail"] = email_address
+        return json
 
     def _request(self, url):
         res = requests.request("GET", url)

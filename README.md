@@ -2,6 +2,10 @@
 
 Cortex Analyzer for [emailrep.io](https://emailrep.io/).
 
+## Examples
+
+![img](screenshot/capture.png)
+
 ```bash
 $ echo '{ "data": "bill@microsoft.com", "dataType":"email"}' | python emailrep_analyzer.py | jq .
 {
@@ -21,17 +25,18 @@ $ echo '{ "data": "bill@microsoft.com", "dataType":"email"}' | python emailrep_a
     "references": 61,
     "score": 100,
     "profiles": [
-      "angellist",
-      "linkedin",
-      "vimeo",
-      "pinterest",
-      "instagram",
-      "flickr",
       "tumblr",
+      "pinterest",
+      "spotify",
+      "instagram",
+      "vimeo",
+      "angellist",
       "myspace",
+      "linkedin",
       "twitter",
-      "spotify"
-    ]
+      "flickr"
+    ],
+    "mail": "bill@microsoft.com"
   }
 }
 ```

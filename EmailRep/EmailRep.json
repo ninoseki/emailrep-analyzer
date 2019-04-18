@@ -5,7 +5,7 @@
   "url": "https://github.com/ninoseki/emailrep-analyzer",
   "license": "MIT",
   "description": "emailrep.io lookup.",
-  "dataTypeList": ["email"],
+  "dataTypeList": ["mail"],
   "command": "EmailRep/emailrep_analyzer.py",
   "baseConfig": "EmailRep"
 }
