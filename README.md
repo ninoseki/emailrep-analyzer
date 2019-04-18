@@ -7,7 +7,7 @@ Cortex Analyzer for [emailrep.io](https://emailrep.io/).
 ![img](screenshot/capture.png)
 
 ```bash
-$ echo '{ "data": "bill@microsoft.com", "dataType":"email"}' | python emailrep_analyzer.py | jq .
+$ echo '{ "data": "bill@microsoft.com", "dataType":"mail"}' | python emailrep_analyzer.py | jq .
 {
   "success": true,
   "summary": {
@@ -42,7 +42,7 @@ $ echo '{ "data": "bill@microsoft.com", "dataType":"email"}' | python emailrep_a
 ```
 
 ```bash
-$ echo '{ "data": "null@null.com", "dataType":"email"}' | python emailrep_analyzer.py | jq .
+$ echo '{ "data": "null@null.com", "dataType":"mail"}' | python emailrep_analyzer.py | jq .
 {
   "success": false,
   "input": {
