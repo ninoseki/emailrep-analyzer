@@ -8,47 +8,57 @@ Cortex Analyzer for [emailrep.io](https://emailrep.io/).
 
 ```bash
 $ echo '{ "data": "bill@microsoft.com", "dataType":"mail"}' | python emailrep_analyzer.py | jq .
-{
+{{
   "success": true,
   "summary": {
     "taxonomies": [
       {
-        "level": "safe",
+        "predicate": "References",
+        "value": 58,
         "namespace": "EmailRep",
-        "predicate": "Reputation",
-        "value": 100
+        "level": "safe"
       }
     ]
   },
-  "artifacts": [],
   "full": {
-    "references": 61,
-    "score": 100,
-    "profiles": [
-      "tumblr",
-      "pinterest",
-      "spotify",
-      "instagram",
-      "vimeo",
-      "angellist",
-      "myspace",
-      "linkedin",
-      "twitter",
-      "flickr"
-    ],
-    "mail": "bill@microsoft.com"
-  }
-}
-```
-
-```bash
-$ echo '{ "data": "null@null.com", "dataType":"mail"}' | python emailrep_analyzer.py | jq .
-{
-  "success": false,
-  "input": {
-    "data": "null@null.com",
-    "dataType": "email"
+    "references": 58,
+    "suspicious": false,
+    "email": "bill@microsoft.com",
+    "mail": "bill@microsoft.com",
+    "details": {
+      "suspicious_tld": false,
+      "blacklisted": false,
+      "profiles": [
+        "twitter",
+        "angellist",
+        "pinterest",
+        "myspace",
+        "linkedin",
+        "vimeo",
+        "flickr"
+      ],
+      "valid_mx": true,
+      "credentials_leaked_recent": false,
+      "spoofable": false,
+      "deliverable": true,
+      "disposable": false,
+      "spam": false,
+      "data_breach": true,
+      "spf_strict": true,
+      "domain_exists": true,
+      "accept_all": true,
+      "last_seen": "02/25/2019",
+      "free_provider": false,
+      "domain_reputation": "high",
+      "dmarc_enforced": true,
+      "new_domain": false,
+      "days_since_domain_creation": 10275,
+      "malicious_activity_recent": false,
+      "credentials_leaked": true,
+      "malicious_activity": false
+    },
+    "reputation": "high"
   },
-  "errorMessage": "not deliverable"
+  "artifacts": []
 }
 ```
